@@ -1,0 +1,34 @@
+/dts-v1/;
+
+/ {
+    #robot-is-on-fire = < 1 >;
+    #enable-skynet-uplink = < 0 >;
+
+
+    /**
+     * Main behaviour tree
+     * Nodes use <function>@<name> syntax
+     */
+    select@root {
+        sequence@avoid-edge {
+
+        };
+        sequence@avoid-enemy {
+
+        };
+        sequence@attack-enemy {
+
+        };
+        sequence@wander {
+
+        };
+
+    };
+
+
+    select@interrupt_edge {
+        use@avoid-edge {
+            handle = < &{/select@root/sequence@avoid-edge} >;
+        };
+    };
+};
