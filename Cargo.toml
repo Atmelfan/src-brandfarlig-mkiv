@@ -7,8 +7,8 @@ version = "0.1.0"
 build = "build.rs"
 
 [dependencies]
-cortex-m = "0.6.0"
-cortex-m-rt = "0.6.8"
+cortex-m = "0.6.1"
+cortex-m-rt = "0.6.10"
 cortex-m-semihosting = "0.3.3"
 panic-halt = "0.2.0"
 #alloc-cortex-m = "0.3.5"
@@ -21,7 +21,7 @@ features = ["stm32f405", "rt"]
 version = "0.7.1"
 
 [dependencies.static-dt-rs]
-path = "../static-dt-rs"
+git = "https://github.com/Atmelfan/static-dt-rs.git"
 
 # this lets you use `cargo fix`!
 [[bin]]
